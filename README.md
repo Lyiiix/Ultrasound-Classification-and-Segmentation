@@ -1,9 +1,13 @@
 # Ultrasound-Classification-and-Segmentation
-https://github.com/user-attachments/assets/14646fd6-8365-468e-89d0-c2b76a95fbf3
+
+
+![Uploading a50732364016c8407c8ce6ff28438f77.gif…]()
+
+
 
 本项目针对实时医疗超声影像分析场景，通过 C++ 构建了一套高性能异步处理流水线。
 
-高吞吐量：在1050上稳定运行于 45-52 FPS，满足实时临床需求。
+高吞吐量：在1050上稳定运行于 45-52 FPS。
 
 双任务并行：单次模型前向传播同时实现 病灶分类 (良恶性判别) 与 实时分割 (ROI Mask)。
 
