@@ -1,7 +1,9 @@
 # Ultrasound-Classification-and-Segmentation
 
 
-![Uploading a50732364016c8407c8ce6ff28438f77.gif…]()
+![seg](https://github.com/user-attachments/assets/25aa1328-ae47-47e6-a290-301518650b43)
+
+
 
 
 
