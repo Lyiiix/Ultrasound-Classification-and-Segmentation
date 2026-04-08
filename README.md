@@ -8,12 +8,18 @@
 
 鲁棒并发设计：彻底杜绝多线程环境下的死锁与内存溢出。
 
-核心架构设计 (Architecture)
 项目采用解耦的四线程流水线架构，各模块通过高效率的 SafeQueue 通信：
+
 Read Thread (视频读取)：负责 I/O 操作，通过 frame.clone() 确保内存隔离。
-AI Process Thread (推理核心)：
+
+---AI Process Thread (推理核心)---
+
 预处理：灰度化、维度缩放、归一化。
+
 多任务推理：解析分类 Logits 与分割 Mask。
+
 平滑滤波器：引入滑动平均算法（Moving Average）消除数值跳变。
-UI/Main Thread (店长调度)：负责 OpenCV 渲染、FPS/Latency 监控及键盘交互。
-Write Thread (异步存档)：负责将处理后的数据压制为 MP4 视频，避免磁盘写入阻塞推理。
+
+UI/Main Thread：负责 OpenCV 渲染、FPS/Latency 监控及键盘交互。
+
+Write Thread ：负责将处理后的数据压制为 MP4 视频，避免磁盘写入阻塞推理。
